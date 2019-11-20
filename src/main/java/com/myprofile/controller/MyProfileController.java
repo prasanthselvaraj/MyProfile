@@ -30,7 +30,7 @@ public class MyProfileController {
 				"developmment, testing and implementation of various internet based applications.Seeking assignments to work in a creative and \r\n" + 
 				"challenging environment using cutting edge technologies where I can constantly improve my technical and analytical abilities.";
 		Map<String, String> resultMap = new HashMap();
-		ModelAndView mvObject = new ModelAndView("HomePage");
+		ModelAndView mvObject = new ModelAndView("ProfileBase");
 		resultMap.put("name", profileName);
 		resultMap.put("leftAlpha", leftAlpha);
 		resultMap.put("rightAlpha", rightAlpha);
