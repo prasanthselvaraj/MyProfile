@@ -7,7 +7,7 @@
 #lineIdRightFive, #skillSetBoxId, #boxOneId, #boxTwoId, #boxThreeId, #boxFourId, #boxFiveId, #boxSixId, #boxSevenId, #extensionBox,
 #labelDiv, #percentageDiv, #labelOne, #labelTwo, #labelThree, #labelFour, #labelFive, #statusOne, #statusTwo, #statusThree, #statusFour,
 #statusFive, #projectNameId, #projectNameLabel,	#projectNamePara, #projectDespLabel, #projectDespPara, #companyNameLabel, 
-#companyNamePara, #teamSizeLabel, #teamSizePara, #profileLabel, #profilePara, #empSummary, #academicSummary{
+#companyNamePara, #teamSizeLabel, #teamSizePara, #profileLabel, #profilePara, #empSummary, #academicSummary, #breadCrumbId{
 	position: absolute;
 }
 
@@ -221,6 +221,11 @@ a:hover {
     top: 11em;
     width: 11em;
     left: 28em;
+}
+
+#breadCrumbId{
+    top: 13em;
+    left: 20.6em;
 }
 </style>
 <script
@@ -485,6 +490,9 @@ a:hover {
 				Profile</a> <a id="githubId" onmouseover="colorChange(1, this)"
 				onmouseout="colorChange(0, this)"
 				href="https://github.com/prasanthselvaraj" target="_blank">GitHub</a>
+		</div>
+		<div id="breadCrumbId">
+		<jsp:include page="BreadCrumb.jsp"></jsp:include>
 		</div>
 		<div id="lineIdRightOne">
 			<svg height="111" width="1500"> <line x1="330" y1="16"
