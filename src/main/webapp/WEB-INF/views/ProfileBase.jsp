@@ -3,8 +3,11 @@
 <!DOCTYPE html>
 <html>
 <style>
- #secondPageId{
-   display: none;
+/*  #secondPageId, #firstPageId{ */
+/*    display: none; */
+/*  } */
+ #hiddenDiv{
+  visibility: hidden;
  }
 </style>
 <script
@@ -12,11 +15,22 @@
 <script>
     var contentFlag;
     $(document).ready(function() {
-    	if(typeof contentFlag == 'undefined' || contentFlag == 'false'){
-    		contentFlag = 'false';
-    	} else {
-    		contentFlag = 'true';
-    	}
+    	var hiddenVar = document.getElementById("hiddenDiv");
+//     	if(typeof contentFlag == 'undefined' || contentFlag == 'false' || hiddenVar.innerHTML == 'false'){
+//     		contentFlag = 'false';
+//     	} else if(hiddenVar.innerHTML == 'true'){
+//     		document.getElementById("firstPageId").style.display="none";
+//     		document.getElementById("secondPageId").style.display="block";
+//     	} else {
+//     		contentFlag = 'true';
+//     	}
+       if(hiddenVar.innerHTML == 'false'){
+    	   document.getElementById("firstPageId").style.display="block";
+    	   document.getElementById("secondPageId").style.display="none";
+       } else {
+    	   document.getElementById("firstPageId").style.display="none";
+   		   document.getElementById("secondPageId").style.display="block";
+       }
     });
 </script>
 <head>
@@ -29,6 +43,7 @@
 	<div id="firstPageId">
 		<jsp:include page="ProfilePageOne.jsp"></jsp:include>
 	</div>
+	<div id="hiddenDiv">${hiddenValue}</div>
 	<div id="secondPageId">
 		<jsp:include page="ProfilePageTwo.jsp"></jsp:include>
 	</div>

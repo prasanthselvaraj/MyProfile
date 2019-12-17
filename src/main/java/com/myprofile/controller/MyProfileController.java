@@ -52,7 +52,7 @@ public class MyProfileController {
 		resultMap.put("academicSummary","Completed Bachelor of Engineering in <b> Electronics and Communication Engineering </b> from <b>Sri Krishna College of Engineering and Technology</b> at Coimbatore in the year 2016 with " + 
 				"91.1%.");
 		resultMap.put("academic", "Academic Qualification");
-		resultMap.put("project", "Project Summary");
+		resultMap.put("project", "Project Summary \n" + "(Aug 2016 - Sep 2019)");
 		resultMap.put("projectNameLabel", "Project Name: ");
 		resultMap.put("companyNameLabel", "Company: ");
 		resultMap.put("companyNamePara", "Infoview Technologies");
@@ -65,6 +65,7 @@ public class MyProfileController {
 		resultMap.put("teamSizePara", "4");
 		resultMap.put("profileLabel", "Profile: ");
 		resultMap.put("profilePara", "Team Member (Developer)");
+		resultMap.put("hiddenValue", "false");
 		mvObject.addAllObjects(resultMap);
 		return mvObject;
 	}
@@ -109,4 +110,14 @@ public class MyProfileController {
 		}
 		return gsonData.toJson(resultMap);
 	}
+	
+	@RequestMapping(value="/pagetwo", method=RequestMethod.GET)
+	public ModelAndView pagetwo(@RequestParam(required=false)String userName) {
+		Map<String, String> resultMap = new HashMap();
+		ModelAndView mvObject = new ModelAndView("ProfileBase");
+		resultMap.put("hiddenValue", "true");
+		mvObject.addAllObjects(resultMap);
+		return mvObject;
+	}
+	
 }

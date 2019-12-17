@@ -29,18 +29,24 @@
 </style>
 <script type="text/javascript">
 function pageChangeClick(current) {
-	   var pageOneVariable = document.getElementById("firstPageId");
-	   var pageTwoVariable = document.getElementById("secondPageId");
 		if (current.id == "PageOneId") {
-			if(typeof contentFlag == 'undefined' || contentFlag == 'false'){
-				contentFlag = 'false';
-				pageOneVariable.style.display="block";
-				pageTwoVariable.style.display="none";
-			}
+				var host = window.location.hostname;
+				var path = window.location.pathname;
+				var pathArr = path.split("/");
+				var protocol = window.location.protocol;
+				var port = window.location.port;
+				var urlForm = protocol.concat("//", host, ":", port, "/", pathArr[1], "/", pathArr[2],
+						"/start");
+				window.location.href = urlForm;
 		} else {
-			contentFlag = 'true';
-			pageOneVariable.style.display="none";
-			pageTwoVariable.style.display="block";
+			var host = window.location.hostname;
+			var path = window.location.pathname;
+			var pathArr = path.split("/");
+			var protocol = window.location.protocol;
+			var port = window.location.port;
+			var urlForm = protocol.concat("//", host, ":", port, "/", pathArr[1], "/", pathArr[2],
+					"/pagetwo");
+			window.location.href = urlForm;
 		}
 }
 

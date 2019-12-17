@@ -138,6 +138,7 @@ a:hover {
 	#dataBaseLabel, #versionControl, #ideLabel {
 	left: 5px;
 	position: relative;
+	cursor: pointer;
 }
 #extensionBox {
 	display: none;
