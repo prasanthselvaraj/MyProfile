@@ -4,7 +4,8 @@
 <html>
 <style>
 #leftPanelId, #circleId, #leftInitial, #leftCrossId, #rightInitial, #rightCrossId, #lineIdLeftOne, #lineIdLeftTwo, #lineIdLeftThree,
-#lineIdLeftFour, #lineIdLeftFive{	position: absolute;
+#lineIdLeftFour, #lineIdLeftFive, #breadCrumbId {	
+     position: absolute;
 }
 
 #leftPanelId {
@@ -88,6 +89,11 @@ label[for="projectLabel"] {
     top: 34.7em;
     left: 173px;
 }
+
+#breadCrumbId{
+    top: 13em;
+    left: 20.6em;
+}
 </style>
 <head>
 </head>
@@ -106,6 +112,9 @@ label[for="projectLabel"] {
 		<div id="rightCrossId">
 			<svg height="250" width="320"> <line x1="235" y1="50" x2="85"
 					y2="180" style="stroke:rgb(0,0,0);stroke-width:1" /> </svg>
+		</div>
+		<div id="breadCrumbId">
+		<jsp:include page="BreadCrumb.jsp"></jsp:include>
 		</div>
 		<div id="lineIdLeftOne">
 			<svg height="90" width="320"> <line x1="80" y1="25" x2="300"
