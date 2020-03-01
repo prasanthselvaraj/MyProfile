@@ -113,9 +113,6 @@ label[for="projectLabel"] {
 			<svg height="250" width="320"> <line x1="235" y1="50" x2="85"
 					y2="180" style="stroke:rgb(0,0,0);stroke-width:1" /> </svg>
 		</div>
-		<div id="breadCrumbId">
-		<jsp:include page="BreadCrumb.jsp"></jsp:include>
-		</div>
 		<div id="lineIdLeftOne">
 			<svg height="90" width="320"> <line x1="80" y1="25" x2="300"
 					y2="25" style="stroke:rgb(96,96,96);stroke-width:1.5" />
