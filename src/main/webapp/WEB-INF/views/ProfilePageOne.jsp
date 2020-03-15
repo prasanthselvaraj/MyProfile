@@ -3,82 +3,23 @@
 <!DOCTYPE html>
 <html>
 <style>
-#profileId, #mailId, #websiteLinks, #linkedInId, #githubId,
-	#lineIdRightOne, #lineIdRightTwo, #lineIdRightThree, #lineIdRightFour,
-	#lineIdRightFive, #skillSetBoxId, #boxOneId, #boxTwoId, #boxThreeId,
-	#boxFourId, #boxFiveId, #boxSixId, #boxSevenId, #extensionBox,
-	#labelDiv, #percentageDiv, #labelOne, #labelTwo, #labelThree,
-	#labelFour, #labelFive, #statusOne, #statusTwo, #statusThree,
-	#statusFour, #statusFive, #projectNameId, #projectNameLabel,
-	#projectNamePara, #projectDespLabel, #projectDespPara,
-	#companyNameLabel, #companyNamePara, #teamSizeLabel, #teamSizePara,
-	#profileLabel, #profilePara, #empSummary, #academicSummary {
+#profileId, #lineIdRightOne, #lineIdRightTwo, #lineIdRightThree,
+	#lineIdRightFour, #lineIdRightFive, #skillSetBoxId, #boxOneId,
+	#boxTwoId, #boxThreeId, #boxFourId, #boxFiveId, #boxSixId, #boxSevenId,
+	#extensionBox, #labelDiv, #percentageDiv, #labelOne, #labelTwo,
+	#labelThree, #labelFour, #labelFive, #statusOne, #statusTwo,
+	#statusThree, #statusFour, #statusFive, #projectNameId,
+	#projectNameLabel, #projectNamePara, #projectDespLabel,
+	#projectDespPara, #companyNameLabel, #companyNamePara, #teamSizeLabel,
+	#teamSizePara, #profileLabel, #profilePara, #empSummary,
+	#academicSummary {
 	position: absolute;
-}
-
-body {
-	background-color: rgb(211, 211, 211);
-}
-
-a {
-	background: linear-gradient(to right, var(- -mainColor) 0%,
-		var(- -mainColor) 5px, transparent 5px);
-	color: #000;
-	padding-left: 10px;
-	padding-top: 5px;
-	text-decoration: none;
-}
-
-a:hover {
-	background: linear-gradient(to right, var(- -mainColor) 0%,
-		var(- -mainColor) 5px, transparent);
-}
-
-:root {
-	-mainColor: rgba(255, 92, 92, 1);
 }
 
 #profileId {
 	float: right;
 	width: 94em;
 	height: 98%;
-}
-
-.nameId {
-	font-size: 27px;
-	text-transform: uppercase;
-	font-family: sans-serif;
-	position: absolute;
-	top: 40px;
-	left: 317px;
-	padding-left: 5px;
-	padding-top: 11px;
-	margin-left: 6px;
-	margin-top: 6px;
-}
-
-#mailId {
-	top: 99px;
-	font-family: sans-serif;
-	height: 26px;
-	left: 329px;
-}
-
-#websiteLinks {
-	font-family: sans-serif;
-	height: 125px;
-	width: 172px;
-	left: 66em;
-}
-
-#linkedInId {
-	top: 51px;
-	padding-top: 5px;
-}
-
-#githubId {
-	top: 85px;
-	padding-top: 7px;
 }
 
 #lineIdRightOne {
@@ -273,25 +214,6 @@ a:hover {
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
 <script>
-	function colorChange(num, current) {
-		var emailVar = document.getElementById("emailId");
-		var linkedVar = document.getElementById("linkedInId");
-		var gitVar = document.getElementById("githubId");
-		if (num == 1) {
-			if (current.id == "emailId") {
-				emailVar.style.color = "white";
-			} else if (current.id == "linkedInId") {
-				linkedVar.style.color = "white";
-			} else {
-				gitVar.style.color = "white";
-			}
-		} else {
-			emailVar.style.color = "black";
-			linkedVar.style.color = "black";
-			gitVar.style.color = "black";
-		}
-	}
-
 	function hideElement(num) {
 		var extensionVar = document.getElementById("extensionBox");
 		var labelDivVar = document.getElementById("labelDiv");
@@ -546,28 +468,10 @@ a:hover {
 </head>
 <body>
 	<div id="profileId">
-		<div class="nameId">${name}</div>
-		<img src="mailbox.png" width="42" height="42">
-		<div id="mailId">
-			<a id="emailId" onmouseover="colorChange(1, this)"
-				onmouseout="colorChange(0, this)"
-				href="mailto:prasanthselvaraj10101994@gmail.com" target="_blank">prasanthselvaraj10101994@gmail.com</a>
-		</div>
-		<div id="websiteLinks">
-			<a id="linkedInId" onmouseover="colorChange(1, this)"
-				onmouseout="colorChange(0, this)"
-				href="https://www.linkedin.com/in/10prasanths/" target="_blank">Linkedin
-				Profile</a> <a id="githubId" onmouseover="colorChange(1, this)"
-				onmouseout="colorChange(0, this)"
-				href="https://github.com/prasanthselvaraj" target="_blank">GitHub</a>
-		</div>
-		<div id="breadCrumbId">
-			<jsp:include page="BreadCrumb.jsp"></jsp:include>
-		</div>
+		<jsp:include page="RightProfileBase.jsp"></jsp:include>
 		<div id="lineIdRightOne">
 			<svg height="111" width="1500"> <line x1="330" y1="16"
 					x2="1500" y2="16" style="stroke:rgb(96,96,96);stroke-width:1.5" />
-		
 		
 		</div>
 		<p align="left"
@@ -576,24 +480,20 @@ a:hover {
 			<svg height="80" width="1500"> <line x1="330" y1="16" x2="1500"
 					y2="16" style="stroke:rgb(96,96,96);stroke-width:1.5" />
 		
-		
 		</div>
 		<div id="lineIdRightThree">
 			<svg height="80" width="1500"> <line x1="330" y1="16" x2="1500"
 					y2="16" style="stroke:rgb(96,96,96);stroke-width:1.5" />
-		
 		
 		</div>
 		<div id="lineIdRightFour">
 			<svg height="80" width="1500"> <line x1="330" y1="16" x2="1500"
 					y2="16" style="stroke:rgb(96,96,96);stroke-width:1.5" />
 		
-		
 		</div>
 		<div id="lineIdRightFive">
 			<svg height="80" width="1500"> <line x1="330" y1="16" x2="1500"
 					y2="16" style="stroke:rgb(96,96,96);stroke-width:1.5" />
-		
 		
 		</div>
 		<div id="skillSetBoxId">

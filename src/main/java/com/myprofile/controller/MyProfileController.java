@@ -19,21 +19,21 @@ import com.google.gson.Gson;
 @Controller
 @RequestMapping(value="startController")
 public class MyProfileController {
-	
+	public static final String PROFILE_NAME = "Prasanth Selvaraj";
+	public static final String LEFT_ALPHA = "P";
+	public static final String RIGHT_ALFA ="S";
 	@RequestMapping(value="/start", method=RequestMethod.GET)
 	public ModelAndView profileList(@RequestParam(required=false)String userName) {
-		String profileName = "Prasanth Selvaraj";
-		String leftAlpha = "P";
-		String rightAlpha = "S";
+		
 		String profLabel= "Experienced Full Stack Developer with a demonstrated history of working in enterprise resource planning consumer products and order\r\n" + 
 				"to delivery of mobility systems. Specializing in back-end and front-end development with <b> 3 years </b> of experience in analysis, design, \r\n" + 
 				"developmment, testing and implementation of various internet based applications.Seeking assignments to work in a creative and \r\n" + 
 				"challenging environment using cutting edge technologies where I can constantly improve my technical and analytical abilities.";
 		Map<String, String> resultMap = new HashMap();
 		ModelAndView mvObject = new ModelAndView("ProfileBase");
-		resultMap.put("name", profileName);
-		resultMap.put("leftAlpha", leftAlpha);
-		resultMap.put("rightAlpha", rightAlpha);
+		resultMap.put("name", PROFILE_NAME);
+		resultMap.put("leftAlpha", LEFT_ALPHA);
+		resultMap.put("rightAlpha", RIGHT_ALFA);
 		resultMap.put("professional", "Professional Summmary");
 		resultMap.put("experience", "Skill Set");
 		resultMap.put("employment", "Employment Summary");
@@ -115,6 +115,9 @@ public class MyProfileController {
 	public ModelAndView pagetwo(@RequestParam(required=false)String userName) {
 		Map<String, String> resultMap = new HashMap();
 		ModelAndView mvObject = new ModelAndView("ProfileBase");
+		resultMap.put("name", PROFILE_NAME);
+		resultMap.put("leftAlpha", LEFT_ALPHA);
+		resultMap.put("rightAlpha", RIGHT_ALFA);
 		resultMap.put("hiddenValue", "true");
 		mvObject.addAllObjects(resultMap);
 		return mvObject;

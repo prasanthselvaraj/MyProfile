@@ -17,6 +17,7 @@
        } else {
     	   document.getElementById("firstPageId").style.display="none";
    		   document.getElementById("secondPageId").style.display="block";
+   		   document.getElementById("hiddenDiv").style.display="none";
        }
     });
 </script>
