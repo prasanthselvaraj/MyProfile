@@ -55,7 +55,7 @@ public class MyProfileController {
 		resultMap.put("project", "Project Summary \n" + "(Aug 2016 - Sep 2019)");
 		resultMap.put("projectNameLabel", "Project Name: ");
 		resultMap.put("companyNameLabel", "Company: ");
-		resultMap.put("companyNamePara", "Infoview Technologies");
+		resultMap.put("companyNamePara", "<b>Infoview Technologies</b>");
 		resultMap.put("projectNamePara", "<b>HUE</b> (High Usability Enterprise)");
 		resultMap.put("projectDespLabel", "Project Description: ");
 		resultMap.put("projectDespPara", "HUE is an enterprise consumer product enriched with AI Works that reduce the\r\n" + 
@@ -119,6 +119,16 @@ public class MyProfileController {
 		resultMap.put("leftAlpha", LEFT_ALPHA);
 		resultMap.put("rightAlpha", RIGHT_ALFA);
 		resultMap.put("hiddenValue", "true");
+		resultMap.put("technologyLabel", "Technologies: ");
+		resultMap.put("techLableOne", "Front End (Java Script, XML, CSS, AJAX)");
+		resultMap.put("techLableTwo", "Back End (JAVA 8)");
+		resultMap.put("dbLabel", "Data Base: ");
+		resultMap.put("db", "MySql (RDBMS)");
+		resultMap.put("responseLabel", "Responsibility: ");
+		resultMap.put("statementOne", "Developing web application ERP product based on <b>Spring MVC Frame work</b> using the above mentioned technologies.");
+		resultMap.put("statementTwo", "Perform code reviews based on defined standards and verified with the code review tools such as <b>Sonar-Cube</b> and <b>Sonar-Lints</b> (Code review tools).");
+		resultMap.put("statementThree", "Worked with team of 4 coordinated to merge and manage codes under version control system <b>(GitLab)</b>.");
+		resultMap.put("statementFour", "Troubleshoot and resolved more than 300 Critical and UI bugs raised by testing teams to deliver flawless product to customers.");
 		mvObject.addAllObjects(resultMap);
 		return mvObject;
 	}

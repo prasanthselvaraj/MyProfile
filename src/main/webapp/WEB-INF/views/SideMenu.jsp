@@ -95,6 +95,21 @@ label[for="projectLabel"] {
     left: 20.6em;
 }
 </style>
+<script>
+    $(document).ready(function() {
+    	var hiddenVar = document.getElementById("hiddenDiv");
+       if(hiddenVar.innerHTML == 'false'){
+    	   document.getElementById("firstPageId").style.display="block";
+    	   document.getElementById("secondPageId").style.display="none";
+    	   document.getElementById("lineIdLeftTwo").style.display="block";
+       } else {
+    	   document.getElementById("firstPageId").style.display="none";
+   		   document.getElementById("secondPageId").style.display="block";
+   		   document.getElementById("hiddenDiv").style.display="none";
+    	   document.getElementById("lineIdLeftTwo").style.display="none";
+       }
+    });
+</script>
 <head>
 </head>
 <body>
